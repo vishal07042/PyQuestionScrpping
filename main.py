@@ -73,6 +73,70 @@
 
 
 
+# import json
+# from bs4 import BeautifulSoup
+# import requests
+
+# response = requests.get("https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/node.js/node.js-quiz.md")
+# res = response.text
+
+# soup = BeautifulSoup(res, "lxml")
+
+# # Debug: Print the fetched content
+# # print(soup.prettify())
+
+# # Find all questions
+# questions = soup.find_all("h4")
+
+# # Debug: Print the number of questions found
+# print(f"Number of questions found: {len(questions)}")
+
+# # List to store all questions, choices, and correct answers
+# quiz_data = []
+
+# # Iterate through each question and its corresponding options
+# for question in questions:
+#     question_text = question.get_text(strip=True)
+#     choices = []
+#     correct_answer = None
+    
+#     # Debug: Print the question text
+#     print(f"Question: {question_text}")
+    
+#     # Find the next sibling elements that are options
+#     next_sibling = question.find_next_sibling()
+#     while next_sibling and next_sibling.name == "ul":
+#         for option in next_sibling.find_all("li", class_="task-list-item"):
+#             option_text = option.get_text(strip=True)
+#             choices.append(option_text)
+#             input_tag = option.find("input", class_="task-list-item-checkbox")
+#             if input_tag and input_tag.has_attr("checked"):
+#                 correct_answer = option_text
+#         next_sibling = next_sibling.find_next_sibling()
+    
+#     # Debug: Print the choices and correct answer
+#     print(f"Choices: {choices}")
+#     print(f"Correct Answer: {correct_answer}")
+    
+#     # Append the question, choices, and correct answer to the list
+#     quiz_data.append({
+#         "question": question_text,
+#         "choices": choices,
+#         "answer": correct_answer
+#     })
+
+# # Write the formatted quiz data to a JSON file
+# with open("quiz_data.json", "w", encoding="utf-8") as json_file:
+#     json.dump(quiz_data, json_file, ensure_ascii=False, indent=4)
+
+# print("Quiz data has been written to quiz_data.json")
+
+
+  
+
+
+
+
 import json
 from bs4 import BeautifulSoup
 import requests
@@ -95,23 +159,24 @@ print(f"Number of questions found: {len(questions)}")
 quiz_data = []
 
 # Iterate through each question and its corresponding options
-for question in questions:
+for idx, question in enumerate(questions, start=1):
     question_text = question.get_text(strip=True)
     choices = []
     correct_answer = None
     
     # Debug: Print the question text
-    print(f"Question: {question_text}")
+    print(f"Question {idx}: {question_text}")
     
     # Find the next sibling elements that are options
     next_sibling = question.find_next_sibling()
-    while next_sibling and next_sibling.name == "ul":
-        for option in next_sibling.find_all("li", class_="task-list-item"):
-            option_text = option.get_text(strip=True)
-            choices.append(option_text)
-            input_tag = option.find("input", class_="task-list-item-checkbox")
-            if input_tag and input_tag.has_attr("checked"):
-                correct_answer = option_text
+    while next_sibling and next_sibling.name != "h4":
+        if next_sibling.name == "ul":
+            for option in next_sibling.find_all("li", class_="task-list-item"):
+                option_text = option.get_text(strip=True)
+                choices.append(option_text)
+                input_tag = option.find("input", class_="task-list-item-checkbox")
+                if input_tag and input_tag.has_attr("checked"):
+                    correct_answer = option_text
         next_sibling = next_sibling.find_next_sibling()
     
     # Debug: Print the choices and correct answer
@@ -120,6 +185,7 @@ for question in questions:
     
     # Append the question, choices, and correct answer to the list
     quiz_data.append({
+        "id": idx,
         "question": question_text,
         "choices": choices,
         "answer": correct_answer
@@ -130,8 +196,3 @@ with open("quiz_data.json", "w", encoding="utf-8") as json_file:
     json.dump(quiz_data, json_file, ensure_ascii=False, indent=4)
 
 print("Quiz data has been written to quiz_data.json")
-
-
-  
-
-
