@@ -481,7 +481,7 @@
             "C: Changes are just bug fixes and no new features were added.",
             "D: Changes will add new functionality but will not break any existing code."
         ],
-        "answer": "Changes are just bug fixes and no new features were added."
+        "answer": "C: Changes are just bug fixes and no new features were added."
     },
     {
         "id": 45,
