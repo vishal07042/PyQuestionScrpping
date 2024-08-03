@@ -8,20 +8,26 @@
 # soup = BeautifulSoup(res, "lxml")
 
 
-# optionsAll = soup.find_all('li',  class_='task-list-item')
+# task_list_items = soup.find_all("li", class_="task-list-item")
 
+# # List to store all correct answers
+# correct_answers = []
 
-# for el in optionsAll:
-#     print(el.get_text(strip=True))
+# # Iterate through each list item to find the correct answers
+# for item in task_list_items:
+#     input_tag = item.find("input", class_="task-list-item-checkbox")
+#     if input_tag and input_tag.has_attr("checked"):
+#         correct_answer = item.get_text(strip=True)
+#         correct_answers.append(correct_answer)
+
+# # Print all correct answers
+# for answer in correct_answers:
+#     print(f"Correct Answer: {answer}")
 
 
 # import json
-# import requests
 # from bs4 import BeautifulSoup
-
-# # Load the existing quiz data
-# with open('quiz_data.json', 'r') as file:
-#     quiz_data = json.load(file)
+# import requests
 
 # # Fetch the page content
 # response = requests.get(
@@ -31,88 +37,85 @@
 # # Parse the page content
 # soup = BeautifulSoup(res, "lxml")
 
-# # Extract all questions and options
-# questions = soup.find_all('h4')
-# options = soup.find_all('ul', class_='contains-task-list')
+# # Find all list items with the class "task-list-item"
+# task_list_items = soup.find_all("li", class_="task-list-item")
 
-# # Debugging: Print the number of questions and options found
-# print(f"Found {len(questions)} questions and {len(options)} option sets")
+# # List to store all correct answers
+# correct_answers = []
 
-# # Populate the choices for each question in quiz_data
-# for idx, option in enumerate(options):
-#     choices = [li.get_text(strip=True)
-#                for li in option.find_all('li', class_='task-list-item')]
-#     if idx < len(quiz_data):
-#         quiz_data[idx]['choices'] = choices
-
-# # Debugging: Print the updated quiz_data to verify choices are being added
-# for item in quiz_data:
-#     print(f"Question ID: {item['id']}, Choices: {item['choices']}")
-
-# # Output the updated quiz data to the JSON file
-# with open('quiz_data.json', 'w') as file:
-#     json.dump(quiz_data, file, indent=4)
-
-# # Print the resulting JSON structure
-# print(json.dumps(quiz_data, indent=4))
-
-
-
-
-
-
-
-
-
-
-# import json
-# import requests
-# from bs4 import BeautifulSoup
+# # Iterate through each list item to find the correct answers
+# for item in task_list_items:
+#     input_tag = item.find("input", class_="task-list-item-checkbox")
+#     if input_tag and input_tag.has_attr("checked"):
+#         correct_answer = item.get_text(strip=True)
+#         correct_answers.append(correct_answer)
 
 # # Load the existing quiz data
 # with open('quiz_data.json', 'r') as file:
 #     quiz_data = json.load(file)
 
+# # Update the quiz data with the correct answers
+# for question in quiz_data:
+#     question_id = question['id']
+#     if question_id <= len(correct_answers):
+#         question['answer'] = correct_answers[question_id - 1]
+
+# # Save the updated quiz data back to the file
+# with open('quiz_data.json', 'w') as file:
+#     json.dump(quiz_data, file, indent=4)
+
+# # Print all correct answers
+# for answer in correct_answers:
+#     print(f"Correct Answer: {answer}")
+
+
+# import json
+# from bs4 import BeautifulSoup
+# import requests
+
 # # Fetch the page content
-# response = requests.get("https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/node.js/node.js-quiz.md")
+# response = requests.get(
+#     "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/node.js/node.js-quiz.md")
 # res = response.text
 
 # # Parse the page content
 # soup = BeautifulSoup(res, "lxml")
 
-# # Extract all questions and options
-# questions = soup.find_all('h4')
-# options = soup.find_all('ul', class_='contains-task-list')
+# # Find all list items with the class "task-list-item"
+# task_list_items = soup.find_all("li", class_="task-list-item")
 
-# # Check if the number of questions matches the number of options
-# if len(questions) != len(options):
-#     print("Warning: The number of questions and options do not match.")
+# # List to store all correct answers
+# correct_answers = []
 
-# # Populate the choices for each question in quiz_data
-# for idx, option in enumerate(options):
-#     choices_elements = option.find_all('li', class_='task-list-item')
-#     choices = [
-#         f"{chr(65 + i)}: {choice.get_text(strip=True)}"
-#         for i, choice in enumerate(choices_elements)
-#     ]
-#     if idx < len(quiz_data):
-#         quiz_data[idx]['choices'] = choices
+# # Iterate through each list item to find the correct answers
+# for item in task_list_items:
+#     input_tag = item.find("input", class_="task-list-item-checkbox")
+#     if input_tag and input_tag.has_attr("checked"):
+#         correct_answer = item.get_text(strip=True)
+#         correct_answers.append(correct_answer)
 
-# # Output the updated quiz data to the JSON file
+# # Load the existing quiz data
+# with open('quiz_data.json', 'r') as file:
+#     quiz_data = json.load(file)
+
+# # Update the quiz data with the correct answers
+# for question in quiz_data:
+#     question_id = question['id']
+#     if question_id <= len(correct_answers):
+#         question['answer'] = correct_answers[question_id - 1]
+
+# # Save the updated quiz data back to the file
 # with open('quiz_data.json', 'w') as file:
 #     json.dump(quiz_data, file, indent=4)
 
-# # Print the resulting JSON structure
-# print(json.dumps(quiz_data, indent=4))
+# # Print all correct answers
+# for answer in correct_answers:
+#     print(f"Correct Answer: {answer}")
 
 
 import json
-import requests
 from bs4 import BeautifulSoup
-
-# Load the existing quiz data
-with open('quiz_data.json', 'r') as file:
-    quiz_data = json.load(file)
+import requests
 
 # Fetch the page content
 response = requests.get(
@@ -122,27 +125,35 @@ res = response.text
 # Parse the page content
 soup = BeautifulSoup(res, "lxml")
 
-# Extract all questions and options
-questions = soup.find_all('h4')
-options = soup.find_all('ul', class_='contains-task-list')
+# Find all list items with the class "task-list-item"
+task_list_items = soup.find_all("li", class_="task-list-item")
 
-# Check if the number of questions matches the number of options
-if len(questions) != len(options):
-    print("Warning: The number of questions and options do not match.")
+# List to store all correct answers
+correct_answers = []
 
-# Populate the choices for each question in quiz_data
-for idx, option in enumerate(options):
-    choices_elements = option.find_all('li', class_='task-list-item')
-    choices = [
-        f"{chr(65 + i)}: {choice.get_text(strip=True)}"
-        for i, choice in enumerate(choices_elements)
-    ]
-    if idx < len(quiz_data):
-        quiz_data[idx]['choices'] = choices
+# Iterate through each list item to find the correct answers
+for item in task_list_items:
+    input_tag = item.find("input", class_="task-list-item-checkbox")
+    if input_tag and input_tag.has_attr("checked"):
+        correct_answer = item.get_text(strip=True).split(
+            '\n')[0]  # Extracting the answer part
+        correct_answers.append(correct_answer)
 
-# Output the updated quiz data to the JSON file
+# Load the existing quiz data
+with open('quiz_data.json', 'r') as file:
+    quiz_data = json.load(file)
+
+# Update the quiz data with the correct answers
+for question in quiz_data:
+    question_id = question['id']
+    if question_id <= len(correct_answers):
+        # Adjust for 0-indexing
+        question['answer'] = correct_answers[question_id - 1]
+
+# Save the updated quiz data back to the file
 with open('quiz_data.json', 'w') as file:
     json.dump(quiz_data, file, indent=4)
 
-# Print the resulting JSON structure
-print(json.dumps(quiz_data, indent=4))
+# Print all correct answers
+for answer in correct_answers:
+    print(f"Correct Answer: {answer}")

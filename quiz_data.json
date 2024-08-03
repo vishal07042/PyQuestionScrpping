@@ -8,7 +8,7 @@
             "C: the poll phase",
             "D: the events queue"
         ],
-        "answer": null
+        "answer": "the call stack"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
             "C: request",
             "D: chalk"
         ],
-        "answer": null
+        "answer": "crypto"
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
             "C: from",
             "D: alloc"
         ],
-        "answer": null
+        "answer": "allocUnsafe"
     },
     {
         "id": 4,
@@ -41,7 +41,7 @@
             "C: dgram",
             "D: http2"
         ],
-        "answer": null
+        "answer": "ftp"
     },
     {
         "id": 5,
@@ -52,7 +52,7 @@
             "C: createReadStream",
             "D: readFileSync"
         ],
-        "answer": null
+        "answer": "createReadStream"
     },
     {
         "id": 6,
@@ -63,7 +63,7 @@
             "C: resolve4",
             "D: reverse"
         ],
-        "answer": null
+        "answer": "lookup"
     },
     {
         "id": 7,
@@ -74,7 +74,7 @@
             "C: console.isDate(value)",
             "D: util.date(value)"
         ],
-        "answer": null
+        "answer": "util.types.isDate(value)"
     },
     {
         "id": 8,
@@ -85,7 +85,7 @@
             "C: yes, through the path module",
             "D: yes, with the http module"
         ],
-        "answer": null
+        "answer": "yes, with the https or http2 modules"
     },
     {
         "id": 9,
@@ -96,7 +96,7 @@
             "C: N-API",
             "D: X-API"
         ],
-        "answer": null
+        "answer": "N-API"
     },
     {
         "id": 10,
@@ -107,7 +107,7 @@
             "C: --chrome",
             "D: --debug"
         ],
-        "answer": null
+        "answer": "--inspect"
     },
     {
         "id": 11,
@@ -118,7 +118,7 @@
             "C: node -p \"process.os.cpus\"",
             "D: node -p \"os.cpus().length\""
         ],
-        "answer": null
+        "answer": "node -p \"os.cpus().length\""
     },
     {
         "id": 12,
@@ -129,7 +129,7 @@
             "C: time",
             "D: print"
         ],
-        "answer": null
+        "answer": "time"
     },
     {
         "id": 13,
@@ -140,7 +140,7 @@
             "C: process.cache",
             "D: require.cache"
         ],
-        "answer": null
+        "answer": "require.cache"
     },
     {
         "id": 14,
@@ -151,7 +151,7 @@
             "C: node -trace-warnings",
             "D: node index.js --no-warnings"
         ],
-        "answer": null
+        "answer": "node --no-warnings"
     },
     {
         "id": 15,
@@ -162,7 +162,7 @@
             "C: util.promisify(child_process.exec)",
             "D: new Promise(child_process.exec)"
         ],
-        "answer": null
+        "answer": "util.promisify(child_process.exec)"
     },
     {
         "id": 16,
@@ -173,7 +173,7 @@
             "C: .editor",
             "D: .save"
         ],
-        "answer": null
+        "answer": ".history"
     },
     {
         "id": 17,
@@ -184,7 +184,7 @@
             "C: The forked process will have its own VM instance.",
             "D: The forked process shares the same VM thread with the parent process."
         ],
-        "answer": null
+        "answer": "The forked process will have its own VM instance."
     },
     {
         "id": 18,
@@ -195,7 +195,7 @@
             "C: (new EventEmitter()).emit('change');",
             "D: new EventEmitter('change');"
         ],
-        "answer": null
+        "answer": "EventEmitter.emit('change');"
     },
     {
         "id": 19,
@@ -206,7 +206,7 @@
             "C: process",
             "D: Buffer"
         ],
-        "answer": null
+        "answer": "process.stdout"
     },
     {
         "id": 20,
@@ -217,7 +217,7 @@
             "C: __flder",
             "D: __filename"
         ],
-        "answer": null
+        "answer": "__filename"
     },
     {
         "id": 21,
@@ -228,7 +228,7 @@
             "C: exec(\"ps\", \"-ef\")",
             "D: fork(\"ps -ef\")"
         ],
-        "answer": null
+        "answer": "exec(\"ps -ef\")"
     },
     {
         "id": 22,
@@ -239,7 +239,7 @@
             "C: debug",
             "D: print"
         ],
-        "answer": null
+        "answer": "trace"
     },
     {
         "id": 23,
@@ -250,7 +250,7 @@
             "C: the VM (like V8 or Chakra)",
             "D: the repl module"
         ],
-        "answer": null
+        "answer": "the VM (like V8 or Chakra)"
     },
     {
         "id": 24,
@@ -261,7 +261,7 @@
             "C: server running athttp://localhost:4000/",
             "D: server running athttp://127.0.0.1:3000/"
         ],
-        "answer": null
+        "answer": "server running athttp://127.0.0.1:3000/"
     },
     {
         "id": 25,
@@ -272,7 +272,7 @@
             "C: It is a retiring module.",
             "D: to provide utilities to test files"
         ],
-        "answer": null
+        "answer": "to provide utilities to play with file and directory paths"
     },
     {
         "id": 26,
@@ -283,7 +283,7 @@
             "C: server.listen",
             "D: server. run"
         ],
-        "answer": null
+        "answer": "server.listen"
     },
     {
         "id": 27,
@@ -294,7 +294,7 @@
             "C: console logs system information",
             "D: creates a file named data and append numbers"
         ],
-        "answer": null
+        "answer": "creates a text file hello.txt and appends customized text"
     },
     {
         "id": 28,
@@ -305,7 +305,7 @@
             "C: node index.js",
             "D: node start"
         ],
-        "answer": null
+        "answer": "node index.js"
     },
     {
         "id": 29,
@@ -316,7 +316,7 @@
             "C: to provide methods to work with databases",
             "D: to find new file systems"
         ],
-        "answer": null
+        "answer": "to provide methods to work with files"
     },
     {
         "id": 30,
@@ -327,7 +327,7 @@
             "C: It is the version with the latest features.",
             "D: It is the safest version for long-term support."
         ],
-        "answer": null
+        "answer": "It is the safest version for long-term support."
     },
     {
         "id": 31,
@@ -338,7 +338,7 @@
             "C: process. stdout",
             "D: process. stderr"
         ],
-        "answer": null
+        "answer": "process. stdinfo"
     },
     {
         "id": 32,
@@ -349,7 +349,7 @@
             "C: undefined",
             "D: an object representing an array that has five elements"
         ],
-        "answer": null
+        "answer": "ReferenceError: arguments is not defined"
     },
     {
         "id": 33,
@@ -360,7 +360,7 @@
             "C: once",
             "D: off"
         ],
-        "answer": null
+        "answer": "start"
     },
     {
         "id": 34,
@@ -371,7 +371,7 @@
             "C: root",
             "D: require"
         ],
-        "answer": null
+        "answer": "process"
     },
     {
         "id": 35,
@@ -382,7 +382,7 @@
             "C: node -h",
             "D: node index.js -h"
         ],
-        "answer": null
+        "answer": "node -h"
     },
     {
         "id": 36,
@@ -393,7 +393,7 @@
             "C: http.ClientRequest",
             "D: http.ServerResponse"
         ],
-        "answer": null
+        "answer": "http.IncomingMessage"
     },
     {
         "id": 37,
@@ -404,7 +404,7 @@
             "C: exports, module, __filename, __dirname",
             "D: exports, require, module, __filename, __dirname"
         ],
-        "answer": null
+        "answer": "exports, require, module, __filename, __dirname"
     },
     {
         "id": 38,
@@ -415,7 +415,7 @@
             "C: libuv",
             "D: events"
         ],
-        "answer": null
+        "answer": "libuv"
     },
     {
         "id": 39,
@@ -426,7 +426,7 @@
             "C: a JSON file that can have a .node extension as well as the .json extension",
             "D: a JavaScript file that can have a .node extension as well as the .js extension"
         ],
-        "answer": null
+        "answer": "a C++ Addon file that is built with node-gyp"
     },
     {
         "id": 40,
@@ -437,7 +437,7 @@
             "C: only variables and arrays",
             "D: functions, objects, arrays, or anything you assign to the module"
         ],
-        "answer": null
+        "answer": "functions, objects, arrays, or anything you assign to the module"
     },
     {
         "id": 41,
@@ -448,7 +448,7 @@
             "C: cluster",
             "D: net"
         ],
-        "answer": null
+        "answer": "cluster"
     },
     {
         "id": 42,
@@ -459,7 +459,7 @@
             "C: crypto",
             "D: TLS"
         ],
-        "answer": null
+        "answer": "crypto"
     },
     {
         "id": 43,
@@ -470,7 +470,7 @@
             "C: const { readFilePromises: readFile } = require(fs)",
             "D: const { readFile } = require(promises)"
         ],
-        "answer": null
+        "answer": "const { readFile } = require(fs).promises"
     },
     {
         "id": 44,
@@ -481,7 +481,7 @@
             "C: Changes are just bug fixes and no new features were added.",
             "D: Changes will add new functionality but will not break any existing code."
         ],
-        "answer": null
+        "answer": "Changes are just bug fixes and no new features were added."
     },
     {
         "id": 45,
@@ -492,7 +492,7 @@
             "C: run, edit, print, loop",
             "D: read, extend, print, loop"
         ],
-        "answer": null
+        "answer": "read, eval, print, loop"
     },
     {
         "id": 46,
@@ -503,7 +503,7 @@
             "C: gyp.json",
             "D: package.gyp"
         ],
-        "answer": null
+        "answer": "binding.gyp"
     },
     {
         "id": 47,
@@ -514,7 +514,7 @@
             "C: assert",
             "D: mocha"
         ],
-        "answer": null
+        "answer": "assert"
     },
     {
         "id": 48,
@@ -525,7 +525,7 @@
             "C: dgram",
             "D: inspector"
         ],
-        "answer": null
+        "answer": "async_hooks"
     },
     {
         "id": 49,
@@ -536,7 +536,7 @@
             "C: string_decoder",
             "D: string_buffer"
         ],
-        "answer": null
+        "answer": "string_decoder"
     },
     {
         "id": 50,
@@ -547,7 +547,7 @@
             "C: process",
             "D: child_process"
         ],
-        "answer": null
+        "answer": "process"
     },
     {
         "id": 51,
@@ -558,7 +558,7 @@
             "C: The event loop is single-threaded, but a JavaScript VM can use multiple threads.",
             "D: JavaScript execution in Node.js is single-threaded, but I/O operations are executed using multiple threads."
         ],
-        "answer": null
+        "answer": "The event loop is single-threaded, but a JavaScript VM can use multiple threads."
     },
     {
         "id": 52,
@@ -569,7 +569,7 @@
             "C: Any values returned by the listeners for an emitted events are ignored.",
             "D: When an event emitter object emits an event, all of the functions attached to that specific event are called synchronously."
         ],
-        "answer": null
+        "answer": "Event names must be camelCase strings."
     },
     {
         "id": 53,
@@ -580,7 +580,7 @@
             "C: vm",
             "D: v8"
         ],
-        "answer": null
+        "answer": "vm"
     },
     {
         "id": 54,
@@ -591,7 +591,7 @@
             "C: const numInstances = require('os').cpus().length;",
             "D: const numInstances = process.cpus().length;"
         ],
-        "answer": null
+        "answer": "const numInstances = require('os').cpus().length;"
     },
     {
         "id": 55,
@@ -602,7 +602,7 @@
             "C: Copy the file into a database and perform the operations there.",
             "D: Use readline together with streams to read and transform and write the file contents line by line."
         ],
-        "answer": null
+        "answer": "Use readline together with streams to read and transform and write the file contents line by line."
     },
     {
         "id": 56,
@@ -613,7 +613,7 @@
             "C: setTimeout",
             "D: Buffer"
         ],
-        "answer": null
+        "answer": "exports"
     },
     {
         "id": 57,
@@ -624,7 +624,7 @@
             "C: writableStream.pipe(readableStream)",
             "D: writableStream.on(pipe, readableStream)"
         ],
-        "answer": null
+        "answer": "readableStream.pipe(writableStream)"
     },
     {
         "id": 58,
@@ -635,7 +635,7 @@
             "C: path.format",
             "D: path.parse"
         ],
-        "answer": null
+        "answer": "path.join"
     },
     {
         "id": 59,
@@ -646,7 +646,7 @@
             "C: to execute multi-threaded code in the Node environment",
             "D: to provide a quick way for users to create REST APIs"
         ],
-        "answer": null
+        "answer": "to insulate Addons from changes in the underlying JavaScript engine"
     },
     {
         "id": 60,
@@ -657,7 +657,7 @@
             "C: a global object that provides information about the database",
             "D: a global object that provides information about the current node process"
         ],
-        "answer": null
+        "answer": "a global object that provides information about the current node process"
     },
     {
         "id": 61,
@@ -668,7 +668,7 @@
             "C: {}",
             "D: Jane"
         ],
-        "answer": null
+        "answer": "{ name: 'Jane' }"
     },
     {
         "id": 62,
@@ -679,7 +679,7 @@
             "C: {'John'}",
             "D: {}"
         ],
-        "answer": null
+        "answer": "{}"
     },
     {
         "id": 63,
@@ -690,7 +690,7 @@
             "C: yes, through the console module",
             "D: no"
         ],
-        "answer": null
+        "answer": "yes, through the assert module"
     },
     {
         "id": 64,
@@ -701,7 +701,7 @@
             "C: deepStrictEqual",
             "D: ifError"
         ],
-        "answer": null
+        "answer": "ifError"
     },
     {
         "id": 65,
@@ -712,7 +712,7 @@
             "C: types",
             "D: callbackify"
         ],
-        "answer": null
+        "answer": "asyncify"
     },
     {
         "id": 66,
@@ -723,7 +723,7 @@
             "C: RangeError",
             "D: AssertionError"
         ],
-        "answer": null
+        "answer": "GlobalError"
     },
     {
         "id": 67,
@@ -734,7 +734,7 @@
             "C: PHP",
             "D: c"
         ],
-        "answer": null
+        "answer": "V8 JavaScript engine"
     },
     {
         "id": 68,
@@ -745,7 +745,7 @@
             "C: As Node.js is asynchronous, this is handled by a threadpool and the performance will not notably degrade.",
             "D: The current thread will block until the execution is completed and the operating system will spawn new threads to handle incoming requests. This can exhaust the number of allowed threads (255) and degrade performance over time."
         ],
-        "answer": null
+        "answer": "The current thread will block until the execution is completed and the operating system will spawn new threads to handle incoming requests. This can exhaust the number of allowed threads (255) and degrade performance over time."
     },
     {
         "id": 69,
@@ -756,7 +756,7 @@
             "C: Google V8",
             "D: Express.js"
         ],
-        "answer": null
+        "answer": "Google V8"
     },
     {
         "id": 70,
@@ -767,7 +767,7 @@
             "C: Response codes are the only way you can tell what is happening on the server.",
             "D: It contains information about the current performance of the server."
         ],
-        "answer": null
+        "answer": "It indicates success or failure to the client and helps with testing."
     },
     {
         "id": 71,
@@ -778,7 +778,7 @@
             "C: ECMAScript modules can be used natively in Node only by using a compiler like Babel.",
             "D: ECMAScript modules can be used natively in Node only by using a bundle like webpack."
         ],
-        "answer": null
+        "answer": "ECMAScript modules can be used natively in Node with the .mjs file extension"
     },
     {
         "id": 72,
@@ -789,7 +789,7 @@
             "C: They are a Node command to validate stability of your code.",
             "D: They tell if a feature is LTS (Long Term Supported)."
         ],
-        "answer": null
+        "answer": "They are an indication of the stability of Nodejs modules and usage recommendations."
     },
     {
         "id": 73,
@@ -800,7 +800,7 @@
             "C: lookup",
             "D: resolve4"
         ],
-        "answer": null
+        "answer": "lookup"
     },
     {
         "id": 74,
@@ -811,7 +811,7 @@
             "C: the .modules folder under the home directory",
             "D: a \"something.js\" file or a \"something\" folder, which exist on the same level as the requiring file"
         ],
-        "answer": null
+        "answer": "the local node_modules folder, then the parents' node_modules folder"
     },
     {
         "id": 75,
@@ -822,7 +822,7 @@
             "C: cluster",
             "D: events"
         ],
-        "answer": null
+        "answer": "openssl"
     },
     {
         "id": 76,
@@ -833,7 +833,7 @@
             "C: to serve as a module to export dependencies",
             "D: to be a log for the application"
         ],
-        "answer": null
+        "answer": "to provide an exact, single representation of the dependency tree"
     },
     {
         "id": 77,
@@ -845,6 +845,6 @@
             "D: server running at http://localhost:4000/",
             "E: Hello World"
         ],
-        "answer": null
+        "answer": "Hello World"
     }
 ]
