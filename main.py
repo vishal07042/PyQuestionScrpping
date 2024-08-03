@@ -1,20 +1,4 @@
-# from bs4 import BeautifulSoup
-# import lxml
 
-# with open("website.html", encoding="utf-8") as file:
-#     contents = file.read()
-
-# soup = BeautifulSoup(contents, "lxml")
-# wwe = soup.find_all(class_="wwe")
-
-# # print(wwe.string)
-
-# for el in wwe:
-#     print(el.string)
-
-# # print(soup.title)
-# # print(soup.title.string)
-# # print(soup.title.name)
 
 from bs4 import BeautifulSoup
 import requests
@@ -76,13 +60,13 @@ for answer in correct_answers:
 
 
 
-############# the options  corrected Form #############
+############# the options  corrected Form  hhhelo final#############
 
 
 
 
 
 
-  
+
 
   
